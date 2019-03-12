@@ -2,7 +2,7 @@
 
 ## About app
 Recipies app 
-is a simple app of menage of yours recipe 
+is a simple app of menage yours recipe 
 
 ## Development server
 
