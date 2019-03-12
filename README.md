@@ -1,7 +1,7 @@
 # RecipiesApp
 
 ## About app
-###Recipies app 
+Recipies app 
 is a simple app of menage of yours recipe 
 
 ## Development server
