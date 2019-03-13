@@ -1,4 +1,4 @@
-# RecipiesApp
+# RecipiesApp *work in progress*
 
 ## About app
 Recipies app is a simple Angular app for menage your recipe 
