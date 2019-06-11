@@ -42,16 +42,22 @@ export class AuthService {
   }
 
   private hadleError(errorRes: HttpErrorResponse) {
-        let errorMessage = 'An unknown error occured!';
-        if (!errorRes.error || !errorRes.error.error) {
-          return throwError(errorMessage);
-        }
-        switch (errorRes.error.error.message) {
-          case 'EMAIL_EXISTS':
-            errorMessage = 'this email exissts already';
-            break;
-        }
-        return throwError(errorMessage);
+    let errorMessage = 'An unknown error occured!';
+    if (!errorRes.error || !errorRes.error.error) {
+      return throwError(errorMessage);
+    }
+    switch (errorRes.error.error.message) {
+      case 'EMAIL_EXISTS':
+        errorMessage = 'this email exissts already';
+        break;
+      case 'EMAIL_NOT_FOUND':
+        errorMessage = 'this email doesn\'t exist';
+        break;
+      case 'INVALID_PASSWORD':
+        errorMessage = 'this password is not correct';
+        break;
+    }
+    return throwError(errorMessage);
   }
 
 }
